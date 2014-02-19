@@ -65,6 +65,8 @@ $morseCodes = array(
 $lookup = [];
 $morse = '';
 
+// Testing github
+
 foreach ($morseCodes as $charmorsearray) {
 	$lookup[$charmorsearray['char']] = $charmorsearray['morse'];
 }
