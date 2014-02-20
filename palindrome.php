@@ -20,8 +20,8 @@ function is_palindrome($input) {
 }
 
 if (is_palindrome($input2)) {
-	echo "{$input1} is a palindrome! Cool, huh?\n";
+	echo "\"{$input1}\" is a palindrome! Cool, huh?\n";
 } else {
-	echo "{$input1} is not a palindrome. Do you even know what those are?\n";
+	echo "\"{$input1}\" is not a palindrome. Do you even know what those are?\n";
 }
 ?>
