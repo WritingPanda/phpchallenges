@@ -14,10 +14,11 @@ function alphabet_soup($str) {
 	foreach ($words as $word) {
 		$singleWord = str_split($word);
 		$alphaWord = sort($singleWord);
+		$return = implode(" ", $singleWord);
 	}
 	// return the result
-	return $singleWord;
+	return $return;
 }
 
-print_r(alphabet_soup($input));
+echo alphabet_soup($input) . "\n";
 ?>
