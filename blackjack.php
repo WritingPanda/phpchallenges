@@ -12,13 +12,24 @@ $cards = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 // card values should be "VALUE SUIT". ex: "7 H"
 // make sure to shuffle the deck before returning it
 function buildDeck($suits, $cards) {
-	
+	$deck = [];
+	foreach ($suits as $suit) {
+		foreach ($cards as $card) {
+			$deck[] = $card . ' ' . $suit;
+		}
+	}
+	shuffle($deck);
+	return $deck;
 }
 
 // determine if a card is an ace
 // return true for ace, false for anything else
 function cardIsAce($card) {
-  // todo
+	if ($card == 'A') {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 // determine the value of an individual card (string)
@@ -26,7 +37,51 @@ function cardIsAce($card) {
 // face cards are worth 10
 // numeric cards are worth their value
 function getCardValue($card) {
-  // todo
+	switch ($card) {
+		case '1':
+			$value = 1;
+			break;
+		case '2':
+			$value = 2;
+		case '3':
+			$value = 3;
+		case '4':
+			$value = 4;
+			break;
+		case '5':
+			$value = 5;
+			break;
+		case '6':
+			$value = 6;
+			break;
+		case '7':
+			$value = 7;
+			break;
+		case '8':
+			$value = 8;
+			break;
+		case '9':
+			$value = 9;
+			break;
+		case '10':
+			$value = 10;
+			break;
+		case 'J':
+			$value = 10;
+			break;
+		case 'Q':
+			$value = 10;
+			break;
+		case 'K':
+			$value = 10;
+			break;
+		case 'A':
+			$value = 11;
+			break;	
+		default:
+			# code...
+			break;
+	}
 }
 
 // get total value for a hand of cards
